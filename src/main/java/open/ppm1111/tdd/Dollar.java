@@ -1,7 +1,7 @@
 package open.ppm1111.tdd;
 
 public class Dollar {
-    int amount;
+    private int amount;
     
     Dollar(int amount) {
         this.amount = amount;
@@ -12,6 +12,7 @@ public class Dollar {
     }
     
     public boolean equals(Object object) {
-        return true;
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
     }
 }
