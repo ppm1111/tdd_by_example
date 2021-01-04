@@ -34,5 +34,11 @@ class TddExampleApplicationTests {
     public void testDifferentClassEquals() {
         assertTrue(new Money(10, "CHF").equals(new Money(10, "CHF")));
     }
+    
+    @Test
+    public void testSimpleAddition() {
+        Money sum = Money.dollar(5).plus(Money.franc(10));
+        assertEquals(Money.dollar(10), sum);
+    }
 
 }
